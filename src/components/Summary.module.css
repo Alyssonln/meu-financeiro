@@ -1,0 +1,103 @@
+.loading { color: var(--text3); padding: 2rem; text-align: center; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
+.cardLabel { font-size: 12px; color: var(--text3); margin-bottom: 6px; }
+.cardValue { font-size: 20px; font-weight: 600; font-family: 'Syne', sans-serif; }
+
+.green { color: var(--green); }
+.red { color: var(--red); }
+.amber { color: var(--amber); }
+
+.section {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.secTitle {
+  font-size: 14px;
+  color: var(--text2);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.chart {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  height: 100px;
+  padding-bottom: 4px;
+}
+
+.barCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bars {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 80px;
+}
+
+.barIncome, .barExpense {
+  width: 10px;
+  border-radius: 3px 3px 0 0;
+  min-height: 2px;
+  transition: height .4s ease;
+}
+.barIncome { background: var(--green); opacity: .7; }
+.barExpense { background: var(--red); opacity: .7; }
+
+.barLabel { font-size: 10px; color: var(--text3); }
+
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text2);
+}
+.legend span { display: flex; align-items: center; gap: 5px; }
+.dotGreen { width: 8px; height: 8px; border-radius: 50%; background: var(--green); opacity:.7; }
+.dotRed { width: 8px; height: 8px; border-radius: 50%; background: var(--red); opacity:.7; }
+
+.txnRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.txnRow:last-child { border-bottom: none; }
+.txnName { font-size: 14px; font-weight: 500; color: var(--text); }
+.txnMeta { font-size: 12px; color: var(--text3); margin-top: 2px; }
+.txnAmt { font-size: 14px; font-weight: 600; font-family: 'Syne', sans-serif; }
+
+.empty { color: var(--text3); font-size: 13px; text-align: center; padding: 1.5rem 0; }
+
+@media (max-width: 640px) {
+  .cards { grid-template-columns: 1fr 1fr; }
+  .cardValue { font-size: 16px; }
+}

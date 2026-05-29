@@ -1,0 +1,92 @@
+.loading { color: var(--text3); padding: 2rem; text-align: center; }
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.filters { display: flex; gap: 6px; }
+
+.filterBtn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text2);
+  font-size: 13px;
+  padding: 5px 14px;
+  transition: all .15s;
+}
+.filterBtn:hover { color: var(--text); }
+.filterBtn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.addBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: opacity .15s;
+}
+.addBtn:hover { opacity: .88; }
+
+.section {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 1.25rem;
+  border-bottom: 1px solid var(--border);
+  transition: background .12s;
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--bg3); }
+
+.rowLeft { display: flex; align-items: center; gap: 12px; }
+
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dotIncome { background: var(--green); }
+.dotExpense { background: var(--red); }
+
+.name { font-size: 14px; font-weight: 500; color: var(--text); }
+.meta { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+.rowRight { display: flex; align-items: center; gap: 12px; }
+
+.amount { font-size: 14px; font-weight: 600; font-family: 'Syne', sans-serif; }
+.green { color: var(--green); }
+.red { color: var(--red); }
+
+.delBtn {
+  background: none;
+  border: none;
+  color: var(--text3);
+  font-size: 13px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: color .12s, background .12s;
+}
+.delBtn:hover { color: var(--red); background: var(--red-bg); }
+
+.empty { color: var(--text3); font-size: 13px; text-align: center; padding: 2rem; }
+
+.formGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.full { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 12px; color: var(--text2); }
+.error { color: var(--red); font-size: 13px; margin-top: 8px; }
+
+@media (max-width: 480px) {
+  .formGrid { grid-template-columns: 1fr; }
+  .full { grid-column: auto; }
+}
